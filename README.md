@@ -1,9 +1,6 @@
 # Fitness-tracker-project
 ![React Fitness Application](https://i.ibb.co/Yt9spGc/image.png)
 
-
-PROJECT TITLE: FITNESS_TRACKER
-
 Table of Contents
 - [Project Title](#project-title)
 - [About the Project](#about-the-project)
@@ -19,7 +16,7 @@ Table of Contents
 
 ## Project Title
 
-M-Pesa CLI-Clone Project
+PROJECT TITLE: FITNESS_TRACKER
 
 ## About the Project
 
