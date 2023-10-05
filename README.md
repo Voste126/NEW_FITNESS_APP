@@ -55,7 +55,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/Voste126/
+   git clone https://github.com/Voste126/NEW_FITNESS_APP
 
 
 2. Create a virtual environment and install project dependencies:
@@ -63,6 +63,7 @@ Before you begin, ensure you have the following installed:
     npm install --force 
 
 3. Activate the virtual environment:
+    pip install -r requirements.txt
     flask run
 
 4. Set up the database:
