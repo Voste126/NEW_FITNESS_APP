@@ -5,7 +5,7 @@ attrs==22.1.0
 backcall==0.2.0
 bcrypt==4.0.1
 blinker==1.6.2
-Brlapi==0.8.4
+
 certifi==2023.7.22
 chardet==4.0.0
 charset-normalizer==3.3.0
