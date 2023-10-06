@@ -19,7 +19,7 @@ decorator==5.1.1
 defer==1.0.4
 distlib==0.3.7
 distro==1.7.0
-distro-info==1.0+ubuntu1
+# distro-info==1.0+ubuntu1
 duplicity==0.8.22
 executing==1.2.0
 Faker==19.6.2
