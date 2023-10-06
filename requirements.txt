@@ -22,7 +22,7 @@ distro==1.7.0
 # distro-info==1.0+ubuntu1
 duplicity==0.8.22
 executing==1.2.0
-Faker==19.6.2
+Faker==18.13.0
 fasteners==0.17.3
 filelock==3.12.2
 Flask==3.0.0
