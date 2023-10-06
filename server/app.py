@@ -4,17 +4,27 @@ from models import db,User, Exercise, Workout
 from sqlalchemy.exc import IntegrityError
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
+from dotenv import load_dotenv
 from flask_jwt_extended import (
     JWTManager, create_access_token, jwt_required, get_jwt_identity, create_refresh_token
 )
 import os
 from flask_cors import CORS
+from sqlalchemy.dialects import postgresql
+import psycopg2
 
-app = Flask(__name__)
+
+load_dotenv()
+
+app = Flask(__name__,
+            static_folder='../client/build',
+            template_folder='../client/build'
+            )
 CORS(app)
 
 # Update the SQLAlchemy configuration to use PostgreSQL
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://steve:steve24@localhost:5432/fitness_tracker'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://steve:steve24@localhost:5432/fitness_tracker'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URI')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'default_secret_key')
 
@@ -177,5 +187,6 @@ def create_exercise():
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000,debug=True)
+    
 

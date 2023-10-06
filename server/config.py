@@ -35,39 +35,39 @@
 # # Initialize CSRF protection
 # csrf = CSRFProtect(app)
 
-import os
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from flask_cors import CORS
-import psycopg2
-from flask_wtf.csrf import CSRFProtect
-from dotenv import load_dotenv
+# import os
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
+# from flask_migrate import Migrate
+# from flask_cors import CORS
+# import psycopg2
+# from flask_wtf.csrf import CSRFProtect
+# from dotenv import load_dotenv
 
-# loads environment variables from .env
-load_dotenv()
+# # loads environment variables from .env
+# load_dotenv()
 
-# app initialization
-app = Flask(__name__)
+# # app initialization
+# app = Flask(__name__)
 
-# configuring for postgres
-app.config['SQLALCHEMY_DATABASE_URI'] =  os.getenv('DATABASE_URI')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# # configuring for postgres
+# app.config['SQLALCHEMY_DATABASE_URI'] =  os.getenv('DATABASE_URI')
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 
-# intializing SQLAlchemy and Migrate
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
+# # intializing SQLAlchemy and Migrate
+# db = SQLAlchemy(app)
+# migrate = Migrate(app, db)
 
-# associate SQLAlchemy db with the flask app
-# db.init_app(app)
+# # associate SQLAlchemy db with the flask app
+# # db.init_app(app)
 
-# enabling CORS on the Flask app instance
-CORS(app)
+# # enabling CORS on the Flask app instance
+# CORS(app)
 
-# secret key for sessions here
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+# # secret key for sessions here
+# app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
-# initialize CSRF protection
-csrf = CSRFProtect(app)
+# # initialize CSRF protection
+# csrf = CSRFProtect(app)

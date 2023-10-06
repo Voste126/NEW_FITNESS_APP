@@ -63,9 +63,11 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import validates
 from flask_bcrypt import Bcrypt
 import re
+from sqlalchemy.schema import MetaData
+from sqlalchemy.dialects import postgresql
 
 bcrypt = Bcrypt()
-db = SQLAlchemy()
+db = SQLAlchemy(session_options={"autoflush": False}, metadata=MetaData(schema="public"))
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
