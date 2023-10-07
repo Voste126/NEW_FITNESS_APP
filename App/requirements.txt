@@ -71,7 +71,7 @@ pickleshare==0.7.5
 Pillow==9.2.0
 pipenv==2023.7.23
 platformdirs==3.10.0
-pluggy==1.0.0+repack
+pluggy==1.0.0
 prompt-toolkit==3.0.39
 psycopg2==2.9.9
 psycopg2-binary==2.9.9
