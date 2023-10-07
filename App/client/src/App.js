@@ -10,7 +10,6 @@ import Footer from './components/Footer';
 import Register from './components/Register';
 import Login from './components/Login';
 
-
 const App = () => (
   <Box width="400px" sx={{ width: { xl: '1488px' } }} m="auto">
     <Navbar />

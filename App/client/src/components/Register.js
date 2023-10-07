@@ -39,7 +39,6 @@ function Register() {
           email: '', // Clear email field
           phone_number: '', // Clear phone_number field
         });
-        alert('User registered successfully');
         setTimeout(() => {
           navigate('/login');
         }, 1000);
@@ -52,78 +51,70 @@ function Register() {
 
         // Redirect to the home page or any other desired location
         navigate('/home');
-      })
-      .catch((error) => {
-        // Handle registration error, e.g., show an error message
-        console.error('Registration failed:', error);
       });
   };
 
   return (
     <div>
       <div className="centered-form">
-      <div className="register-container">
-        <h2>Register</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="register-input">
-            <div>
-              <label htmlFor="username">Username:</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                value={formData.username}
-                onChange={(e) =>
-                  setFormData({ ...formData, username: e.target.value })
-                }
-                required
-              />
+        <div className="register-container">
+          <h2>Register</h2>
+          <form onSubmit={handleSubmit}>
+            <div className="register-input">
+              <div>
+                <label htmlFor="username">Username:
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    value={formData.username}
+                    onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+                    required
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="email">Email:
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="phone_number">Phone Number:
+                  <input
+                    type="text"
+                    id="phone_number"
+                    name="phone_number"
+                    value={formData.phone_number}
+                    onChange={(e) => setFormData({ ...formData, phone_number: e.target.value })}
+                    required
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="password">Password:
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    value={formData.password}
+                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                    required
+                  />
+                </label>
+              </div>
             </div>
-            <div>
-              <label htmlFor="email">Email:</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                required
-              />
+            <div className="register-button">
+              <button type="submit">Register</button>
             </div>
-            <div>
-              <label htmlFor="phone_number">Phone Number:</label>
-              <input
-                type="text"
-                id="phone_number"
-                name="phone_number"
-                value={formData.phone_number}
-                onChange={(e) =>
-                  setFormData({ ...formData, phone_number: e.target.value })
-                }
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={(e) =>
-                  setFormData({ ...formData, password: e.target.value })
-                }
-                required
-              />
-            </div>
-          </div>
-          <div className="register-button">
-            <button type="submit">Register</button>
-          </div>
-        </form>
-      </div>
+          </form>
+        </div>
       </div>
     </div>
   );
