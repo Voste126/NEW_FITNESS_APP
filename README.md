@@ -57,13 +57,17 @@ Before you begin, ensure you have the following installed:
 
 2. Create a virtual environment and install project dependencies:
     ```bash
-    npm install --force 
+    cd client
+    npm install --legacy-peer-deps
+    npm start
 
 3. Activate the virtual environment:
+    ```bash
     pip install -r requirements.txt
     flask run
 
 4. Set up the database:
+use the env files to set up and export relevant files
 
 
 5. Its hosted in render 
