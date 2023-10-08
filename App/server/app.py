@@ -17,6 +17,7 @@ import psycopg2
 load_dotenv()
 
 app = Flask(__name__,
+            static_url_path='',
             static_folder='../client/build',
             template_folder='../client/build'
             )
@@ -36,8 +37,10 @@ db.init_app(app)
 jwt.init_app(app)
 
 @app.route('/')
-def index():
+@app.route('/<int:id>')
+def index(id=0):
     return render_template("index.html")
+
 # User registration route
 @app.route('/register', methods=['POST'])
 def register():
