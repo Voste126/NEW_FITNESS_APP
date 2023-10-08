@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response, redirect, url_for
+from flask import Flask, request, jsonify, make_response, redirect, url_for,render_template
 from flask_sqlalchemy import SQLAlchemy
 from models import db,User, Exercise, Workout
 from sqlalchemy.exc import IntegrityError
@@ -37,8 +37,7 @@ jwt.init_app(app)
 
 @app.route('/')
 def index():
-   return "Welcome to fitness App"
-
+    return render_template("index.html")
 # User registration route
 @app.route('/register', methods=['POST'])
 def register():
