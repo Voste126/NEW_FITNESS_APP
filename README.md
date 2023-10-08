@@ -70,8 +70,8 @@ Before you begin, ensure you have the following installed:
 use the env files to set up and export relevant files
 
 5. Its hosted in render
-  ```bash
-  https://myapp-du1h.onrender.com/
+    ```bash
+    https://myapp-du1h.onrender.com/
 
 
 ### Usage
