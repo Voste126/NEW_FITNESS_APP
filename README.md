@@ -74,19 +74,19 @@ use the env files to set up and export relevant files
   https://myapp-du1h.onrender.com/
 
 
-## Usage
+### Usage
 Use of the project is to test knowledge of my team on creating a user application that is can be hosted from using React to using Flask
 
-## Contributing
+### Contributing
 This was a team project where we were 4 active members:
 Steve austine
 Wayne Korir
 Lawrence Ngare
 Roy Kororei
 
-## License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details
 
-## Contact 
+### Contact 
 Link and reach me on my linkedIn profile https://www.linkedin.com/in/steve-austine-84834823b/
 
