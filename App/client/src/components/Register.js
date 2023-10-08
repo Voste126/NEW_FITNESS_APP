@@ -59,6 +59,7 @@ function Register() {
       <div className="centered-form">
         <div className="register-container">
           <h2>Register</h2>
+          <h3>Please make sure you have a unique username, email,phone number, password to get registered</h3>
           <form onSubmit={handleSubmit}>
             <div className="register-input">
               <div>

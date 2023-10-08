@@ -28,7 +28,7 @@ function Login() {
         localStorage.setItem('access_token', accessToken);
         setTimeout(() => {
           navigate('/home');
-        }, 2000);
+        }, 1000);
       });
   };
 
