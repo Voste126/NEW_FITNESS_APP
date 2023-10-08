@@ -35,33 +35,9 @@ jwt = JWTManager(app)
 db.init_app(app)
 jwt.init_app(app)
 
-@app.route('/', methods=['POST'])
+@app.route('/')
 def index():
-    data = request.get_json()
-    username = data.get('username')
-    password = data.get('password')
-    user_email = data.get('user_email')  # Get user_email from the request data
-    user_phone_number = data.get('user_phone_number')  # Get user_phone_number from the request data
-
-    # Check if the username already exists
-    if User.query.filter_by(username=username).first():
-        return jsonify({'message': 'Username already exists'}), 400
-
-    # Create a new user with user_email and user_phone_number
-    user = User(username=username, password=password, user_email=user_email, user_phone_number=user_phone_number)
-
-    # Validate the user data, including email and phone number if needed
-    # You can add validation logic here
-
-    db.session.add(user)
-    db.session.commit()
-
-    # Generate an access token for the newly registered user
-    access_token = create_access_token(identity=username)
-    # Create a redirection URL to the login page
-    redirect_url = url_for('login')
-
-    return jsonify(access_token=access_token, redirect=redirect_url), 201
+   return "Welcome to fitness App"
 
 # User registration route
 @app.route('/register', methods=['POST'])
